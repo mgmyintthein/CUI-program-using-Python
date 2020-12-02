@@ -10,6 +10,9 @@ inp=" "
 
 while inp!="":
     inp=input("Enter a word: ")
+    if(inp==""):
+        print("Termination!")
+        break
     file1 = open('text1.txt', 'r') 
     while True:     
     
@@ -26,7 +29,7 @@ while inp!="":
 
     for a in word:
         if a==inp:
-            print("Error.....")
+            print("Error...The input word is already exit.")
             same=False
             break
         else:
@@ -43,14 +46,4 @@ while inp!="":
         
         file1.close()
         count+=1
-        print("Finish")
-
-    
-     
-  
-
-  
-
-    
-
-
+        print("Finish Insertion")
